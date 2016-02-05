@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	struct sembuf sops[N];
 	for (int i = 0; i < N; ++i) {
 		sops[i].sem_num = i;
-		sops[i].sem_op = 1;
+		sops[i].sem_op = i;
 		sops[i].sem_flg = /*SEM_UNDO*/0;
 	}
 	
